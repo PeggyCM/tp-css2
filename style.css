@@ -1,0 +1,85 @@
+/*GLOBAL*/
+body{
+    background-color:rgb(242, 248, 162);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+div, article,.bouton{
+    border:5px ridge pink;
+    border-radius: 10px;
+    padding:2%;
+    margin-left:10%;
+    margin-right:10%;  
+}
+span{
+    font-style:oblique;
+    color: blueviolet;
+}
+/*particularité menu*/
+.link{
+    text-decoration: none;
+    color:black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}    
+nav{
+position: sticky;
+top: 0;
+}
+ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color:darkgreen;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    list-style-type: none ;
+}
+.section1:hover{
+    background-color:rgb(255, 255, 0);
+}
+.section2:active{
+    background-color:rgb(255, 255, 0);
+}
+.section3:focus-within{
+    background-color:rgb(255, 255, 0);
+}
+.section4:visited{
+    background-color:rgb(255, 255, 0);
+}
+/*Particularités parapgraphes*/
+.titre2, em{
+    font-weight: bolder;
+    color:blue;
+    font-size: 40px;
+}
+.backg{
+    background-color:white;
+}
+
+/*les boutons*/
+.bouton{
+    background-color: darkblue;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 10px;
+    padding-left:20px; 
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 60px;
+        &:hover{
+            background-color: rgb(133, 133, 168);
+        }
+}
+.image{
+    width:8%;
+    height:8%;
+    &:hover{
+        width:60%;
+        height:60%;
+    }
+position: relative;
+bottom:-40px;
+right: -100px; 
+}
