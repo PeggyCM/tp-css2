@@ -11,6 +11,10 @@
     --hoover-bouton: rgb(133, 133, 168);
 }   
 /*GLOBAL*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
     background-color: var(--fond-body);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -23,18 +27,57 @@ div, article,.bouton{
     margin-left:10%;
     margin-right:10%;  
 }
+.div-image2{
+    border: none;
+    padding: 0px;
+    margin:0px;
+}
 span{
     font-style:oblique;
     color: var(--italic);
 }
 /*particularité menu*/
-.link{
+nav li{
+    float:left;
+    width:25%;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+}
+nav ul::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+nav{
+    width:100%;
+    margin:0px;
+    background-color: white;
+    position: sticky;
+    top:0px;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    color:black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+/*.link{
     text-decoration: none;
     color: var(--lien);
     padding-top: 10px;
     padding-bottom: 10px;
 }    
 nav{
+    height: 60px;
     position: sticky;
     top: 0px;
 }
@@ -43,10 +86,10 @@ ul{
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--fond-menu);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     list-style-type: none ;
-}
+}*/
 .section1:hover{
     background-color: var(--lecture-menu);
 }
@@ -85,25 +128,38 @@ ul{
             background-color: var(--hoover-bouton);
         }
 }
-.image{
+.image2{
+    width:8%;
+    height:8%;
+    position:absolute;
+    margin-bottom: -10%;
+    z-index:1;
+}
+.image1{
     width:8%;
     height:8%;
     position: relative;
     bottom:-40px;
     right: -100px;
-    &:hover{
-        width:60%;
-        height:60%;
-    } 
+    
 }
 
+
 @media (max-width: 1023px) {
-  body {
-    background-color: var(--hoover-bouton);
-  }
+    body {
+        background-color: var(--hoover-bouton);
+        .div-image2{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
 }
 @media (max-width: 767px) {
-  body {
-    background-color: pink;
-  }
+    body {
+        background-color: pink;
+        .div-image2{
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
